@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+* {
+  font-family: 'Play', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  transition: all .2s linear;
+  text-decoration: none; }
+
+html {
+  background-color: #001b2c; }
+
+.header {
+  padding: 0.3rem 9%;
+  background-color: #00061f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; }
+  .header .logo img {
+    height: 5rem;
+    margin-left: 1.2rem; }
+    .header .logo img:hover {
+      transform: scale(1.1); }
+  .header .navbar a {
+    margin: 0 1.2rem;
+    font-size: 1.5rem;
+    color: #b5dff7;
+    display: inline-block; }
+    .header .navbar a:hover {
+      color: #06b42c;
+      transform: scale(1.2); }
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: #b5dff7;
+  cursor: pointer;
+  display: none; }
+
+.home {
+  padding-top: 5rem;
+  padding-bottom: 2rem; }
+  .home .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9%;
+    height: calc(100vh - 5rem); }
+    .home .item .content {
+      text-align: center;
+      width: 50%; }
+      .home .item .content h1 {
+        font-size: 2.1rem;
+        letter-spacing: .3rem;
+        color: #b5dff7;
+        padding-bottom: 1rem; }
+      .home .item .content p {
+        font-size: 1.5rem;
+        letter-spacing: .3rem;
+        color: #04d342;
+        padding-bottom: 3rem; }
+    .home .item .btn {
+      border: 0.2rem solid #b5dff7;
+      padding: .5rem 1.7rem;
+      background: #00ccff;
+      font-size: 2rem;
+      letter-spacing: .1rem;
+      font-weight: 700;
+      color: #00061f;
+      border-radius: 20%;
+      transition: .7s; }
+      .home .item .btn:hover {
+        background: red; }
+    .home .item .images {
+      width: 50%; }
+      .home .item .images img {
+        height: 110%;
+        width: 110%; }
+
+.heading {
+  text-align: center; }
+  .heading h1 {
+    font-size: 2.5rem;
+    letter-spacing: .3rem;
+    color: #b5dff7;
+    padding-top: 7rem; }
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+  padding: 2rem 9%; }
+  .box-container .box {
+    border-radius: .6rem;
+    overflow: hidden;
+    background-color: #b5dff7; }
+    .box-container .box a:hover img {
+      transform: scale(1.2); }
+    .box-container .box .image {
+      height: 8rem;
+      overflow: hidden;
+      width: 100%; }
+      .box-container .box .image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
+    .box-container .box .content {
+      overflow: hidden;
+      padding: .2rem .3rem;
+      height: 4rem; }
+      .box-container .box .content h3 {
+        font-size: .8rem;
+        text-align: center;
+        color: #00061f;
+        text-transform: none; }
+
+.bet-day .heading {
+  margin-bottom: 3rem; }
+.bet-day .bet-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 9%; }
+  .bet-day .bet-container .content {
+    text-align: center;
+    width: 50%;
+    padding: 0 2rem; }
+    .bet-day .bet-container .content h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: .2rem;
+      color: #b5dff7;
+      padding-bottom: 1rem; }
+    .bet-day .bet-container .content p {
+      font-size: .8rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      color: #04d342;
+      text-transform: none;
+      padding-bottom: 1rem; }
+    .bet-day .bet-container .content span {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: .3rem;
+      color: #06f5fd; }
+  .bet-day .bet-container .image {
+    width: 50%; }
+    .bet-day .bet-container .image img {
+      height: 100%;
+      width: 100%; }
+
+.statistic {
+  margin-bottom: 2rem; }
+  .statistic .heading {
+    margin-bottom: 3rem; }
+
+.stat-container {
+  padding: 0 18%; }
+  .stat-container .stat-box {
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .3rem;
+    border: 2px solid #00061f; }
+    .stat-container .stat-box .image-box {
+      height: 7rem;
+      width: 18rem;
+      margin-left: 2rem;
+      position: relative;
+      right: 2rem;
+      z-index: -1; }
+      .stat-container .stat-box .image-box img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill; }
+    .stat-container .stat-box .content-box {
+      height: 7rem;
+      width: 55rem;
+      padding: .5rem 1rem; }
+      .stat-container .stat-box .content-box p {
+        font-size: 1rem;
+        color: #04d342;
+        margin-bottom: .2rem; }
+      .stat-container .stat-box .content-box h4 {
+        color: #06f5fd;
+        font-size: 1rem;
+        font-weight: 400; }
+    .stat-container .stat-box .result-box {
+      height: 7rem;
+      width: 15rem;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden; }
+      .stat-container .stat-box .result-box img {
+        height: 40%;
+        object-fit: cover;
+        margin: 3rem 3rem; }
+
+.footer {
+  background-color: #00061f; }
+  .footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 1rem;
+    padding: 1rem 9%;
+    text-align: center;
+    align-items: center; }
+    .footer .footer-container .box-footer {
+      color: #b5dff7; }
+      .footer .footer-container .box-footer a {
+        font-size: 2rem;
+        color: #b5dff7;
+        margin-right: 2rem; }
+        .footer .footer-container .box-footer a:hover {
+          color: #06b42c;
+          transform: scale(1.2); }
+      .footer .footer-container .box-footer h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: .8rem; }
+      .footer .footer-container .box-footer p a {
+        font-size: 1rem;
+        text-transform: none;
+        letter-spacing: .2rem; }
+        .footer .footer-container .box-footer p a i {
+          margin-right: .5rem; }
+      .footer .footer-container .box-footer .links {
+        display: block;
+        font-size: .8rem;
+        margin-bottom: .6rem;
+        letter-spacing: .2rem;
+        text-align: start;
+        padding-left: 4rem; }
+        .footer .footer-container .box-footer .links i {
+          margin-right: .5rem; }
+
+/* NEWS */
+.news-page {
+  background-color: #b5dff7;
+  max-width: 60rem;
+  margin: 7rem auto 1rem auto;
+  padding: 2rem 2rem;
+  border-radius: .5rem; }
+  .news-page .heding {
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    text-align: center;
+    text-transform: none; }
+  .news-page .date {
+    color: #1302f7;
+    padding-bottom: 1rem; }
+  .news-page .news-content p {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    text-transform: none;
+    padding-bottom: .8rem; }
+    .news-page .news-content p .foto-news {
+      width: 50%;
+      float: right;
+      margin: 0 0 2rem 2rem; }
+  .news-page .news-autor {
+    font-size: 1.1rem;
+    text-transform: none;
+    padding-top: 1rem; }
+
+/* media */
+@media (max-width: 1082px) {
+  .header .navbar a {
+    margin: 0 .7rem;
+    font-size: 1.2rem; }
+
+  .home .item {
+    padding: 2rem 9%;
+    height: 100%; }
+
+  .bet-day .heading {
+    margin-bottom: 0; }
+    .bet-day .heading h1 {
+      padding-top: 1rem; }
+  .bet-day .bet-container .content p {
+    font-size: .8rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #04d342;
+    text-transform: none;
+    padding-bottom: 1rem; }
+  .bet-day .bet-container .content h2 {
+    padding: 2rem 0 1rem 0; }
+  .bet-day .bet-container .content span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    color: #06f5fd; }
+  .bet-day .bet-container .image {
+    width: 50%; }
+    .bet-day .bet-container .image img {
+      height: 100%;
+      width: 100%; }
+
+  .statistic .heading h1 {
+    padding-top: 3rem; } }
+@media (max-width: 860px) {
+  #menu-btn {
+    display: inline-block; }
+
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #001b2c;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+    .header .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    .header .navbar a {
+      margin: 2rem;
+      font-size: 2rem;
+      display: block; }
+
+  .home {
+    padding-top: 10rem; }
+    .home .item {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 2rem 9%; }
+      .home .item .content {
+        text-align: center;
+        margin-bottom: 3rem;
+        width: 100%; }
+        .home .item .content h1 {
+          font-size: 2.1rem;
+          letter-spacing: .3rem;
+          padding-bottom: 1rem; }
+        .home .item .content p {
+          font-size: 1.5rem;
+          letter-spacing: .3rem;
+          padding-bottom: 3rem; }
+      .home .item .images {
+        height: 160%;
+        width: auto; }
+
+  .bet-day .heading {
+    margin-bottom: 3rem; } }
+.statistic .stat-box {
+  height: 5rem; }
+  .statistic .stat-box .image-box {
+    height: 5rem; }
+  .statistic .stat-box .content-box {
+    height: 5rem;
+    padding: .2rem 0; }
+    .statistic .stat-box .content-box p {
+      font-size: .9rem; }
+    .statistic .stat-box .content-box h4 {
+      font-size: .9rem; }
+  .statistic .stat-box .result-box {
+    height: 5rem;
+    width: 9rem; }
+    .statistic .stat-box .result-box img {
+      margin: 1rem 1rem; }
+
+@media (max-width: 700px) {
+  .bet-day .bet-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 9%; }
+    .bet-day .bet-container .content {
+      width: 100%;
+      padding-bottom: 2rem; }
+    .bet-day .bet-container .image {
+      width: 90%; }
+
+  .statistic {
+    margin-bottom: 2rem; }
+
+  .stat-container {
+    padding: 0 9%; }
+    .stat-container .result-box {
+      width: 8rem; } }
+@media (max-width: 460px) {
+  .bet-day .heading {
+    margin-bottom: 1rem; }
+    .bet-day .heading h1 {
+      padding-top: 1rem; }
+  .bet-day .bet-container {
+           /* height: 70vh;
+*/ }
+    .bet-day .bet-container .content {
+      padding: 0; }
+      .bet-day .bet-container .content span {
+        font-size: 1rem; }
+
+  .statistic {
+    margin: 2rem 1rem 2rem 1rem; }
+    .statistic .heading {
+      margin-bottom: 2rem; }
+      .statistic .heading h1 {
+        /* font-size: 1.5rem; */
+        padding-top: 0; }
+
+  .stat-container .stat-box {
+    height: 3rem; }
+    .stat-container .stat-box .image-box {
+      display: none; }
+    .stat-container .stat-box .content-box {
+      height: 3rem;
+      padding: 0.5rem 0.4rem; }
+      .stat-container .stat-box .content-box p {
+        font-size: .4rem; }
+      .stat-container .stat-box .content-box h4 {
+        font-size: .5rem; }
+    .stat-container .stat-box .result-box img {
+      margin: 2rem 0;
+      height: 20%; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,707 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+*{
+    font-family: 'Play', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+
+$text-color: rgb(181, 223, 247);
+$bg-color: rgb(0, 27, 44);
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap:1rem;
+}
+
+html{
+    background-color: $bg-color;
+}
+
+.header{
+    padding: 0.3rem 9%;
+    background-color: rgb(0, 6, 31);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+
+
+    .logo img{
+        height: 5rem;
+        margin-left: 1.2rem;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    .navbar a{
+        margin: 0 1.2rem;
+        font-size: 1.5rem;
+        color: $text-color;
+        display: inline-block;
+
+        &:hover{
+            color: rgb(6, 180, 44);
+            transform: scale(1.2);
+        }
+    }
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    color: $text-color;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+
+
+    .item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 9%;
+        height: calc(100vh - 5rem);
+
+        .content{
+            text-align: center;
+            width: 50%;
+
+            h1{
+                font-size: 2.1rem;
+                letter-spacing: .3rem;
+                color: $text-color;
+                padding-bottom: 1rem;
+            }
+
+            p{
+                font-size: 1.5rem;
+                letter-spacing: .3rem;
+                color: rgb(4, 211, 66);
+                padding-bottom: 3rem;
+            }
+
+
+        }
+
+        .btn{
+            border: .2rem solid $text-color;
+            padding: .5rem 1.7rem;
+            background: rgb(0, 204, 255);
+            font-size: 2rem;
+            letter-spacing: .1rem;
+            font-weight: 700;
+            color: rgb(0, 6, 31);
+            border-radius: 20%;
+            transition: .7s;
+
+            &:hover{
+                background: red;
+            }
+
+        }
+
+        .images{
+            width: 50%;
+
+            img{
+                height: 110%;
+                width: 110%;
+            }
+        }
+    }
+}
+
+.heading{
+    text-align: center;
+
+
+    h1{
+        font-size: 2.5rem;
+        letter-spacing: .3rem;
+        color: $text-color;
+        padding-top: 7rem;
+    }
+
+}
+
+.box-container{
+    @include grid(12rem);
+    padding: 2rem 9%;
+
+    .box{
+        border-radius: .6rem;
+        overflow: hidden;
+        background-color: $text-color;
+
+        a{
+            &:hover{
+                img{
+                  transform: scale(1.2);
+                }
+              }
+        }
+
+        .image{
+            height: 8rem;
+            overflow: hidden;
+            width: 100%;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content{
+            overflow: hidden;
+            padding: .2rem .3rem;
+            height: 4rem;
+
+            h3{
+                font-size: .8rem;
+                text-align: center;
+                color:rgb(0, 6, 31);
+                text-transform: none;
+            }
+
+        }
+    }
+}
+
+.bet-day{
+
+    .heading{
+        margin-bottom: 3rem;
+    }
+
+    .bet-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 9%;
+
+        .content{
+            text-align: center;
+            width: 50%;
+            padding: 0 2rem;
+
+            h2{
+                font-size: 1.4rem;
+                font-weight: 400;
+                letter-spacing: .2rem;
+                color: $text-color;
+                padding-bottom: 1rem;
+            }
+
+            p{
+                font-size: .8rem;
+                line-height: 1.5rem;
+                font-weight: 400;
+                color: rgb(4, 211, 66);
+                text-transform: none;
+                padding-bottom: 1rem;
+
+            }
+
+            span{
+                font-size: 1.5rem;
+                font-weight: 700;
+                letter-spacing: .3rem;
+                color: rgb(6, 245, 253);
+            }
+
+
+        }
+        .image{
+            width: 50%;
+
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+.statistic{
+    margin-bottom: 2rem;
+
+    .heading{
+        margin-bottom: 3rem;
+    }
+}
+
+
+.stat-container{
+    padding: 0 18%;
+
+
+    .stat-box{
+        height: 7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: .3rem;
+        border: 2px solid rgb(0, 6, 31);
+
+
+       .image-box{
+           height: 7rem;
+           width: 18rem;
+           margin-left: 2rem;
+           position: relative;
+           right: 2rem;
+           z-index: -1;
+
+           img{
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+           }
+        }
+
+        .content-box{
+            height: 7rem;
+            width: 55rem;
+            padding: .5rem 1rem;
+
+            p{
+                font-size: 1rem;
+                color: rgb(4, 211, 66);
+                margin-bottom: .2rem;
+            }
+
+            h4{
+                color: rgb(6, 245, 253);
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+
+        .result-box{
+            height: 7rem;
+            width: 15rem;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+
+
+            img{
+             height: 40%;
+             object-fit: cover;
+             margin: 3rem 3rem;
+            }
+        }
+    }
+}
+
+.footer{
+    background-color: rgb(0, 6, 31);
+
+    .footer-container{
+        @include grid(13rem);
+        padding: 1rem 9%;
+        text-align: center;
+        align-items: center;
+
+        .box-footer{
+            color: $text-color;
+
+            a{
+                font-size: 2rem;
+                color: $text-color;
+                margin-right: 2rem;
+
+                &:hover{
+                    color: rgb(6, 180, 44);
+                    transform: scale(1.2);
+                }
+            }
+
+            h3{
+                font-size: 1rem;
+                font-weight: 400;
+                margin-bottom: .8rem;
+            }
+
+            p a{
+                font-size: 1rem;
+                text-transform: none;
+                letter-spacing: .2rem;
+
+                i{
+                    margin-right: .5rem;
+                }
+            }
+
+            .links{
+                display: block;
+                font-size: .8rem;
+                margin-bottom: .6rem;
+                letter-spacing: .2rem;
+                text-align: start;
+                padding-left: 4rem;
+
+                i{
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* NEWS */
+
+.news-page{
+    background-color: $text-color;
+    max-width: 60rem;
+    margin: 7rem auto 1rem auto;
+    padding: 2rem 2rem;
+    border-radius: .5rem;
+
+    .heding{
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding-bottom: 1rem;
+        text-align: center;
+        text-transform: none;
+    }
+
+    .date{
+        color: rgb(19, 2, 247);
+        padding-bottom: 1rem;
+    }
+
+    .news-content p{
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        text-transform: none;
+        padding-bottom: .8rem;
+
+        .foto-news{
+            width: 50%;
+            float: right;
+            margin: 0 0 2rem 2rem;
+
+        }
+    }
+
+    .news-autor{
+        font-size: 1.1rem;
+        text-transform: none;
+        padding-top: 1rem;
+    }
+}
+
+
+
+
+/* media */
+
+@media (max-width: 1082px){
+
+    .header{
+
+        .navbar a{
+            margin: 0 .7rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    .home{
+        .item{
+            padding: 2rem 9%;
+            height: 100%;
+        }
+    }
+
+
+    .bet-day{
+
+
+        .heading{
+            margin-bottom: 0;
+
+            h1{
+                padding-top: 1rem;
+            }
+        }
+
+        .bet-container{
+
+
+            .content{
+
+                p{
+                    font-size: .8rem;
+                    line-height: 1.5rem;
+                    font-weight: 400;
+                    color: rgb(4, 211, 66);
+                    text-transform: none;
+                    padding-bottom: 1rem;
+
+                }
+
+                h2{
+                    padding: 2rem 0 1rem 0;
+                }
+
+                span{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    letter-spacing: .3rem;
+                    color: rgb(6, 245, 253);
+                }
+            }
+            .image{
+                width: 50%;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .statistic{
+        .heading h1{
+            padding-top: 3rem;
+        }
+    }
+}
+
+@media (max-width: 860px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header{
+
+        .navbar{
+            position: absolute;
+            top:99%; left:0; right:0;
+            background: $bg-color;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            a{
+                margin:2rem;
+                font-size: 2rem;
+                display: block;
+            }
+        }
+    }
+
+    .home{
+        padding-top: 10rem;
+
+        .item{
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 2rem 9%;
+
+            .content{
+                text-align: center;
+                margin-bottom: 3rem;
+                width: 100%;
+
+                h1{
+                    font-size: 2.1rem;
+                    letter-spacing: .3rem;
+                    padding-bottom: 1rem;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    letter-spacing: .3rem;
+                    padding-bottom: 3rem;
+                }
+            }
+
+            .images{
+                height: 160%;
+                width: auto;
+            }
+        }
+    }
+
+    .bet-day .heading {
+        margin-bottom: 3rem;
+    }
+}
+
+.statistic{
+
+    .stat-box{
+        height: 5rem;
+
+        .image-box{
+            height: 5rem;
+        }
+
+        .content-box{
+            height: 5rem;
+            padding: .2rem 0;
+
+            p{
+                font-size: .9rem;
+            }
+
+            h4{
+                font-size: .9rem;
+            }
+        }
+
+        .result-box{
+            height: 5rem;
+            width: 9rem;
+
+            img{
+                margin: 1rem 1rem;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 700px){
+    .bet-day{
+
+        .bet-container{
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 2rem 9%;
+
+            .content{
+                width: 100%;
+                padding-bottom: 2rem;
+            }
+
+            .image{
+                width: 90%;
+            }
+        }
+    }
+
+    .statistic{
+        margin-bottom: 2rem;
+    }
+
+    .stat-container{
+        padding: 0 9%;
+
+        .result-box{
+            width: 8rem;
+        }
+    }
+}
+
+
+@media (max-width: 460px) {
+    .bet-day{
+        .heading{
+            margin-bottom: 1rem;
+
+            h1{
+                padding-top: 1rem;
+            }
+        }
+
+        .bet-container{
+            /* height: 70vh;
+ */
+            .content{
+                padding: 0;
+
+                span{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .statistic{
+        margin: 2rem 1rem 2rem 1rem;
+
+        .heading{
+            margin-bottom: 2rem;
+
+            h1{
+                /* font-size: 1.5rem; */
+                padding-top: 0;
+            }
+        }
+
+    }
+
+    .stat-container{
+
+        .stat-box{
+            height: 3rem;
+
+            .image-box{
+                display: none;
+            }
+
+            .content-box{
+                 height: 3rem;
+                 padding: 0.5rem 0.4rem;
+
+                 p{
+                    font-size: .4rem;
+                 }
+
+                h4{
+                    font-size: .5rem;
+                }
+            }
+
+            .result-box{
+
+                img{
+                    margin: 2rem 0;
+                    height: 20%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
